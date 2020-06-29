@@ -3,12 +3,14 @@ import bodyParser from "body-parser"
 
 const app = express()
 
+const port = process.env.PORT
+
 app.use(bodyParser.json())
 
 app.get("/", (req, res) => {
   res.send("Hello Babel")
 })
 
-app.listen(3501, () => {
-  console.log(`app is listening to port 4000`)
+app.listen(port, () => {
+  console.log(`🚀 Listening on port ${port}`)
 })
